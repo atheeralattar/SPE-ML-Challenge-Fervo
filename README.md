@@ -1,5 +1,5 @@
+# BHCT Prediction - SPE ML Challenge 2025 by Fervo
 ## 1. Introduction
-- **BHCT Prediction - SPE ML Challenge 2025 by Fervo**
 - **Problem Statement**
 - **Objectives and Goals**
 - **Importance and Real-World Applications**
