@@ -31,7 +31,14 @@
 | Total Gas (ML) (lagged) (1%=100 Units) | 100.00%            |
 
 ![missing matrix](images/missing_matrix.png)
-I decided to discard columns of missing data more than 20%, nothing special about the percentage, this is a pure personal preference. The imputation approach of the remaining colums is by using the KNN imputer in the sklearn package. This approach involves learning from data and more efficient than mean or median imputation. Below how the data looks like after using backfill operation.
+I decided to discard columns of missing data more than 20%, nothing special about the percentage, this is a pure personal preference. The imputation approach of the remaining colums is by using the KNN imputer in the sklearn package. This approach involves learning from data and more efficient than mean or median imputation. Below how the data looks like after using backfill operation. That means following columns will be dropped.
+
+| Column                                 | Missing Percentage |
+| -------------------------------------- | ------------------ |
+| East West Horizontal (ft)              | 95.56%             |
+| Gamma Ray (offset) (API)               | 63.24%             |
+| North South Horizontal (ft)            | 95.56%             |
+| Total Gas (ML) (lagged) (1%=100 Units) | 100.00%            |
 
 ![missing matrix](images/missing_imputation.png)
 
