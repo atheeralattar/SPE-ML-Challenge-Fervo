@@ -40,6 +40,7 @@ I decided to discard columns of missing data more than 20%, nothing special abou
 | North South Horizontal (ft)            | 95.56%             |
 | Total Gas (ML) (lagged) (1%=100 Units) | 100.00%            |
 
+
 ![missing matrix](images/missing_imputation.png)
 
 - **2.5: Outliers Analysis:**
