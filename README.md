@@ -45,7 +45,34 @@ I decided to discard columns of missing data more than 20%, nothing special abou
 
 - **2.5: Outliers Analysis:**
 
+Local Outlier Factor (LOF) method was used analyze the outliers. I decided to remove the top 1% of the outliers scores. Here is the before and after values for the outlier removal from the 3 datasets.
+
+| DataFrame | Original Length| New Length | Removed Points |
+|-----------|----------------|------------|----------------|
+| df1       | 7879           | 7800       | 79             |
+| df2       | 8259           | 8176       | 83             |
+| df3       | 6925           | 6855       | 70             |
+
 ## 3. Data Preprocessing
+- **Correlation Matrix**
+Since we have large number of columns, I kept only correlations above 0.5, checking the correlation matirx below.
+![](images/corr.png)
+below is correlations that are above 0.5
+![](images/high_corr.png)
+Some of these columns are prone to high covariance, this can be noticed from looking at the correlations values and can also be concluded from field experience, below is an example.
+
+| Column                  | Correlation |
+|-------------------------|-------------|
+| Bttm Pipe Temp (°F)     | 1.000000    |
+| Pipe Length (ft)        | 0.991367    |
+| Depth(ft)               | 0.990280    |
+| Bit Position (ft)       | 0.990280    |
+| Hole Depth (ft)         | 0.990280    |
+| Svy Depth (ft)          | 0.990214    |
+| Gamma Depth (ft)        | 0.990206    |
+| Bit Time (hr)           | 0.954932    |
+| Time On Bottom (hr)     | 0.954932    |
+| Circulating Hrs (hr)    | 0.928182    |
 
 - **Feature Selection and Engineering**
 - **Data Transformation** (scaling, encoding, normalization)
