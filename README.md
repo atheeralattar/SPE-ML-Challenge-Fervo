@@ -85,7 +85,9 @@ I decided to discard columns of missing data more than 20%, nothing special abou
 
 Local Outlier Factor (LOF) method was used analyze the outliers. I decided to remove the top 1% of the outliers scores. Here is the before and after values for the outlier removal from the 3 datasets.
 
-![](images/lof.png)
+<p align="center">
+  <img src="images/lof.png" width="300">
+</p>
 
 | DataFrame | Original Length| New Length | Removed Points |
 |-----------|----------------|------------|----------------|
