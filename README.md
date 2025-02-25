@@ -118,9 +118,31 @@ Some of these columns are prone to high covariance, this can be noticed from loo
   | Time On Bottom (hr)     | 0.954932    |
   | Circulating Hrs (hr)    | 0.928182    |
 
-  For instance, pipe length, depth, hole depth are all highly correlated since they are measuring or representing a similar value in a way or another, for this reason I decided to study all the variables. Here is the final list of my selected variables for the base model (provided data dictionary was utilized to understand the data variables)
+  For instance, pipe length, depth, hole depth are all highly correlated since they are measuring or representing a similar value in a way or another, for this reason I decided to study all the variables. Here is the final list of my selected variables for the base model (provided data dictionary was utilized to understand the data variables and I looked at the positive correlations only).
 
-- **Colinearity Analysis:** Looking at the data glosaary and from domain experience we can expect some multi-coolinearity between some of the variables easpecially the ones that can be inferred from others or measure a variation of the same quantity. I eliminated the negative correlations and recreated the correation matrix to invetigate some of the variables.
+  
+  | Column Name                  |
+  |------------------------------|
+  | Depth(ft)                    |
+  | Bit Time (hr)                |
+  | Time On Bottom (hr)          |
+  | Hook Load (klb)              |
+  | Strks - Acc Fill (strokes)   |
+  | ML Mud Temp IN (°F)          |
+  | Bit Weight (klb)             |
+  | Mud Temp In (°F)             |
+  | Lst Jnt Time (s)             |
+  | Mud Temp Out (°F)            |
+  | Run Jnt Time (s)             |
+  | Total Rotations on DP ()     |
+  | MSE Total (psi)              |
+  | Bit MSE (psi)                |
+  | Gain Loss (bbl)              |
+  | Rotary Torque (A)            |
+  | Diff Press (psi)             |
+
+
+  - **Colinearity Analysis:** Looking at the data glosaary and from domain experience we can expect some multi-coolinearity between some of the variables easpecially the ones that can be inferred from others or measure a variation of the same quantity. I eliminated the negative correlations and recreated the correation matrix to invetigate some of the variables.
 
   ![](images/pos_corr_mat.png)
 it can be easily seen that we have a very highly correlated areas in the correlation matrix, let's breakdown these observations:
@@ -129,8 +151,9 @@ it can be easily seen that we have a very highly correlated areas in the correla
   - **Time related measurements**: This can be spotted at the second red area on the correlation matrix, starting from Bit Time all the way to Strks, Bit time, time on the job, Circulating Hours, Time on Bottom,Time on Job, Hook Load can also be a proxy to time as it increases with time. 
 
 
-- **Data Transformation** (scaling, encoding, normalization)
-- **Splitting Data** (train-test-validation split)
+- **Data Transformation** (scaling, encoding, normalization): I used standard scaler to scale the training data, the scaling happened after the split to preven any data leakage. 
+
+- **Splitting Data** (train-test-validation split): Data was splitted into 80/20 ratio and the subset columns were applied to the raw datasets.
 
 ## 4. Model Selection and Training
 - **Overview of Algorithms Considered**
