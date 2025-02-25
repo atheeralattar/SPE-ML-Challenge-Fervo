@@ -157,9 +157,20 @@ it can be easily seen that we have a very highly correlated areas in the correla
 
 ## 4. Model Selection and Training
 - **Overview of Algorithms Considered**
-- **Justification for Chosen Model(s)**
-- **Hyperparameter Tuning**
+I tried to stick to regression and decision based algorithms since this a a problem of regression nature. 
+- **Models**
+
+  | Model                   | R² Value |
+  |-------------------------|----------|
+  | Ridge Regression        | 0.904    |
+  | Elastic Net Regression  | 0.904  |
+  | Lasso Regression        | 0.904 |
+- **Hyperparameter Tuning**: All parameters were left to default at this stage, since we are generating a base model.
+
 - **Model Training Details**
+
+
+
 
 ## 5. Model Evaluation
 
